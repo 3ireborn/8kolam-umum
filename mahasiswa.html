@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluang Bisnis Mahasiswa - Sistem Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
+        .font-m { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-5 pt-12 pb-20">
+    <div class="max-w-2xl w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-xl overflow-hidden relative">
+        <div class="bg-indigo-600 p-6 md:p-8 text-center">
+            <span class="bg-white text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">Khusus Mahasiswa</span>
+            <h1 class="text-2xl md:text-3xl font-black text-white font-m uppercase leading-tight">Lulus Kuliah Langsung Nganggur? Jangan Sampai!</h1>
+        </div>
+        
+        <div class="p-6 md:p-8 space-y-6">
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold text-amber-400 font-m">Fakta Mahasiswa Zaman Now:</h2>
+                <ul class="space-y-3 text-slate-300 text-sm">
+                    <li class="flex items-start gap-3"><span class="text-red-500 text-lg">❌</span> Pusing mikirin biaya UKT dan revisi skripsi yang menguras kantong.</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 text-lg">❌</span> Gengsi minta uang saku terus-terusan ke orang tua.</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 text-lg">❌</span> Lulusan makin banyak, persaingan cari kerja makin brutal.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 p-5 rounded-xl border border-indigo-500/30 shadow-inner">
+                <h2 class="text-lg font-bold text-indigo-400 font-m mb-2">Jadilah Mahasiswa Mandiri!</h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Sambil kuliah, kamu bisa mulai bangun sumber income digitalmu sendiri. Waktu fleksibel, modal bisa disisihkan dari uang jajan. Lulus kuliah nggak usah pusing sebar CV, karena kamu sudah punya penghasilan sendiri dari sistem ini.
+                </p>
+            </div>
+
+            <!-- Tombol CTA -->
+            <div class="text-center pt-4 border-t border-slate-700 mt-4">
+                <p class="text-xs font-bold text-red-400 mb-3 animate-pulse">🔥 Kuota Mentoring Terbatas! Jangan Tunggu Lulus!</p>
+                <a id="btnWA" href="#" class="inline-block w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-[0_0_15px_rgba(79,70,229,0.4)] transition uppercase tracking-widest text-sm font-m">
+                    🎓 AMBIL KUOTA MENTORING SEKARANG
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomorWA = urlParams.get('wa') || '6285218453131'; 
+        const namaPanggilan = urlParams.get('name') || 'Kak'; 
+        const pesan = `Halo ${namaPanggilan}, saya Mahasiswa dan nggak mau nganggur setelah lulus. Mohon info program mentoring bisnisnya.`;
+        document.getElementById('btnWA').href = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+    </script>
+</body>
+</html>
+
