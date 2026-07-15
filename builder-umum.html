@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Serah Terima - NPA Umum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
+        .font-m { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-5 pt-10 pb-20">
+
+    <div class="max-w-3xl w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden">
+        
+        <!-- Header -->
+        <div class="bg-blue-600 p-6 text-center">
+            <h1 class="text-2xl font-black text-white font-m uppercase tracking-widest">Builder Serah Terima (Umum)</h1>
+            <p class="text-xs text-blue-200 mt-1">Tools khusus Admin NPA untuk generate script Kuda Troya</p>
+        </div>
+
+        <!-- Form Input -->
+        <div class="p-6 space-y-4">
+            <div>
+                <label class="block text-sm font-bold text-amber-400 mb-1">Nama Pembeli:</label>
+                <input type="text" id="inputNama" placeholder="Contoh: Budi Santoso" class="w-full bg-slate-900 border border-slate-600 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-bold text-amber-400 mb-1">Nomor WA (Gunakan 62):</label>
+                <input type="number" id="inputWA" placeholder="Contoh: 628123456789" class="w-full bg-slate-900 border border-slate-600 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500">
+            </div>
+
+            <button onclick="generateScript()" class="w-full mt-4 bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl shadow-lg transition uppercase tracking-widest text-sm font-m">
+                ⚙️ GENERATE SCRIPT SEKARANG
+            </button>
+        </div>
+
+        <!-- Hasil Output -->
+        <div class="p-6 border-t border-slate-700 bg-slate-900/50">
+            <label class="block text-sm font-bold text-emerald-400 mb-2">Hasil Script Serah Terima:</label>
+            <textarea id="outputScript" class="w-full h-96 bg-slate-900 border border-slate-600 rounded-lg p-4 text-slate-300 text-sm whitespace-pre text-left focus:outline-none focus:border-emerald-500 font-mono" readonly></textarea>
+            
+            <button onclick="copyToClipboard()" id="btnCopy" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 rounded-xl shadow-lg transition uppercase tracking-widest text-sm font-m flex justify-center items-center gap-2">
+                <span>📋</span> COPY SCRIPT KE WHATSAPP
+            </button>
+        </div>
+    </div>
+
+    <!-- Script Logika Generator -->
+    <script>
+        function generateScript() {
+            const nama = document.getElementById('inputNama').value;
+            let wa = document.getElementById('inputWA').value;
+
+            // Validasi sederhana
+            if(!nama || !wa) {
+                alert("Mohon isi Nama dan Nomor WA terlebih dahulu, Ndan!");
+                return;
+            }
+
+            // Hapus karakter non-angka dari WA
+            wa = wa.replace(/\D/g,'');
+            // Jika diawali 0, ganti ke 62
+            if(wa.startsWith('0')) {
+                wa = '62' + wa.substring(1);
+            }
+
+            // Encode nama untuk URL (mengubah spasi menjadi %20)
+            const namaUrl = encodeURIComponent(nama);
+            
+            // GANTI LINK REPO DI BAWAH INI SESUAI DENGAN FOLDER UMUM NDAN
+            const baseUrl = "https://3ireborn.github.io/8kolam-umum";
+
+            const scriptTemplate = `Alhamdulillah, Barakallah ${nama}! 🎉
+
+Bukti transferan sudah kami terima dengan aman dan data nomor WA Anda sudah sukses dikunci permanen ke dalam sistem.
+
+Sesuai janji, ini dia 8 Senjata Tempur Digital (Kolam Prospek Otomatis VVIP) eksklusif atas nama Anda. Silakan simpan dan gunakan link di bawah ini untuk mendatangkan closingan baru:
+
+1️⃣ Kolam Biaya Sekolah:
+${baseUrl}/sekolah.html?wa=${wa}&name=${namaUrl}
+
+2️⃣ Kolam Emak-emak (IRT):
+${baseUrl}/emak.html?wa=${wa}&name=${namaUrl}
+
+3️⃣ Kolam Pejuang Devisa (TKW):
+${baseUrl}/tkw.html?wa=${wa}&name=${namaUrl}
+
+4️⃣ Kolam Karyawan:
+${baseUrl}/karyawan.html?wa=${wa}&name=${namaUrl}
+
+5️⃣ Kolam Mahasiswa:
+${baseUrl}/mahasiswa.html?wa=${wa}&name=${namaUrl}
+
+6️⃣ Kolam Peluang Umum:
+${baseUrl}/umum.html?wa=${wa}&name=${namaUrl}
+
+7️⃣ Kolam Pengusaha:
+${baseUrl}/pengusaha.html?wa=${wa}&name=${namaUrl}
+
+8️⃣ Kolam ASN / PNS:
+${baseUrl}/pns.html?wa=${wa}&name=${namaUrl}
+
+---
+
+💡 TIPS CEPAT PANEN CLOSINGAN DARI NPA SMART SYSTEM:
+* Gunakan Sesuai Target: Sebar link sesuai profesi prospek (misal: link TKW untuk grup BMI Taiwan). Tembak tepat sasaran!
+* Pasang di Bio Medsos: Tempelkan link di bio TikTok, profil Facebook Pro, atau status WhatsApp.
+* Biarkan Sistem Bekerja: Tugas Anda cukup sebar link. Biarkan sistem presentasi 24 jam untuk Anda.
+
+Selamat menggunakan alat tempur barunya! Siap-siap HP-nya bergetar penuh chat prospek. 🚀🔥
+
+• Silahkan di cek linknya dan WA Floating nya 
+Dan Promosikan 
+karena kalo bisnis itu harus ada promosi nya 
+kalau gak ya *Permisi*🤭
+
+• Kalau ada team lain pingin punya Link kayak kalian 
+tolong berikan link ini 
+*https://3ireborn.github.io/penawaran-npa.html*
+
+• Dan silahkan join di group WA 
+[NANTI MASUKKAN LINK GRUP WA LINTAS BISNIS DI SINI]
+Tidak ada Paksaan dan ini lintas Jaringan
+
+Salam penuh cinta 💞 dari NPA Smart System 
+_PakD Sugiarto Kurniawan_`;
+
+            document.getElementById('outputScript').value = scriptTemplate;
+        }
+
+        function copyToClipboard() {
+            const textarea = document.getElementById('outputScript');
+            const btn = document.getElementById('btnCopy');
+            
+            if(!textarea.value) {
+                alert("Generate script dulu sebelum copy, Ndan!");
+                return;
+            }
+
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // Untuk HP
+            navigator.clipboard.writeText(textarea.value).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span>✅</span> BERHASIL DICOPY!';
+                btn.classList.replace('bg-emerald-600', 'bg-blue-600');
+                btn.classList.replace('hover:bg-emerald-500', 'hover:bg-blue-500');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-blue-600', 'bg-emerald-600');
+                    btn.classList.replace('hover:bg-blue-500', 'hover:bg-emerald-500');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
