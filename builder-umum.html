@@ -15,13 +15,11 @@
 
     <div class="max-w-3xl w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden">
         
-        <!-- Header -->
         <div class="bg-blue-600 p-6 text-center">
             <h1 class="text-2xl font-black text-white font-m uppercase tracking-widest">Builder Serah Terima (Umum)</h1>
             <p class="text-xs text-blue-200 mt-1">Tools khusus Admin NPA untuk generate script Kuda Troya</p>
         </div>
 
-        <!-- Form Input -->
         <div class="p-6 space-y-4">
             <div>
                 <label class="block text-sm font-bold text-amber-400 mb-1">Nama Pembeli:</label>
@@ -38,7 +36,6 @@
             </button>
         </div>
 
-        <!-- Hasil Output -->
         <div class="p-6 border-t border-slate-700 bg-slate-900/50">
             <label class="block text-sm font-bold text-emerald-400 mb-2">Hasil Script Serah Terima:</label>
             <textarea id="outputScript" class="w-full h-96 bg-slate-900 border border-slate-600 rounded-lg p-4 text-slate-300 text-sm whitespace-pre text-left focus:outline-none focus:border-emerald-500 font-mono" readonly></textarea>
@@ -49,84 +46,66 @@
         </div>
     </div>
 
-    <!-- Script Logika Generator -->
     <script>
         function generateScript() {
             const nama = document.getElementById('inputNama').value;
             let wa = document.getElementById('inputWA').value;
 
-            // Validasi sederhana
             if(!nama || !wa) {
                 alert("Mohon isi Nama dan Nomor WA terlebih dahulu, Ndan!");
                 return;
             }
 
-            // Hapus karakter non-angka dari WA
             wa = wa.replace(/\D/g,'');
-            // Jika diawali 0, ganti ke 62
             if(wa.startsWith('0')) {
                 wa = '62' + wa.substring(1);
             }
 
-            // Encode nama untuk URL (mengubah spasi menjadi %20)
             const namaUrl = encodeURIComponent(nama);
-            
-            // GANTI LINK REPO DI BAWAH INI SESUAI DENGAN FOLDER UMUM NDAN
             const baseUrl = "https://3ireborn.github.io/8kolam-umum";
 
             const scriptTemplate = `Alhamdulillah, Barakallah ${nama}! 🎉
 
 Bukti transferan sudah kami terima dengan aman dan data nomor WA Anda sudah sukses dikunci permanen ke dalam sistem.
 
-Sesuai janji, ini dia 8 Senjata Tempur Digital (Kolam Prospek Otomatis VVIP) eksklusif atas nama Anda. Silakan simpan dan gunakan link di bawah ini untuk mendatangkan closingan baru:
+Sesuai janji, ini dia Senjata Tempur Digital eksklusif atas nama Anda. Silakan simpan dan gunakan untuk mendatangkan closingan baru:
 
+*🎯 1. SISTEM UTAMA: 8 KOLAM PROSPEK*
 1️⃣ Kolam Biaya Sekolah:
 ${baseUrl}/sekolah.html?wa=${wa}&name=${namaUrl}
-
 2️⃣ Kolam Emak-emak (IRT):
 ${baseUrl}/emak.html?wa=${wa}&name=${namaUrl}
-
 3️⃣ Kolam Pejuang Devisa (TKW):
 ${baseUrl}/tkw.html?wa=${wa}&name=${namaUrl}
-
 4️⃣ Kolam Karyawan:
 ${baseUrl}/karyawan.html?wa=${wa}&name=${namaUrl}
-
 5️⃣ Kolam Mahasiswa:
 ${baseUrl}/mahasiswa.html?wa=${wa}&name=${namaUrl}
-
 6️⃣ Kolam Peluang Umum:
 ${baseUrl}/umum.html?wa=${wa}&name=${namaUrl}
-
 7️⃣ Kolam Pengusaha:
 ${baseUrl}/pengusaha.html?wa=${wa}&name=${namaUrl}
-
 8️⃣ Kolam ASN / PNS:
 ${baseUrl}/pns.html?wa=${wa}&name=${namaUrl}
 
+*🎁 2. BONUS EKSKLUSIF VVIP (GUDANG SENJATA DIGITAL)*
+Silakan klik dan bookmark link Dashboard di bawah ini. Semua alat riset, generator konten FB, hingga alat duplikasi untuk mitra/downline Anda sudah terangkum di sini:
+👉 ${baseUrl}/dashboard-ai.html
+
 ---
+💡 TIPS CEPAT PANEN CLOSINGAN:
+* Gunakan Sesuai Target: Sebar link sesuai profesi prospek (misal: link TKW untuk grup BMI Taiwan). 
+* Pasang di Bio Medsos: Tempelkan link di profil medsos atau status WA.
+* Biarkan Sistem Bekerja: Tugas Anda cukup sebar link. Biarkan sistem 24 jam untuk Anda.
 
-💡 TIPS CEPAT PANEN CLOSINGAN DARI NPA SMART SYSTEM:
-* Gunakan Sesuai Target: Sebar link sesuai profesi prospek (misal: link TKW untuk grup BMI Taiwan). Tembak tepat sasaran!
-* Pasang di Bio Medsos: Tempelkan link di bio TikTok, profil Facebook Pro, atau status WhatsApp.
-* Biarkan Sistem Bekerja: Tugas Anda cukup sebar link. Biarkan sistem presentasi 24 jam untuk Anda.
+• Jika ada tim yang ingin punya sistem canggih seperti ini, berikan link referensi: 
+https://3ireborn.github.io/8kolam-umum/penawaran-npa.html
 
-Selamat menggunakan alat tempur barunya! Siap-siap HP-nya bergetar penuh chat prospek. 🚀🔥
+*🤝 3. SUPPORT SYSTEM & MENTORING*
+Anda resmi tergabung dalam lingkaran elit kami. Silakan masuk ke grup pembinaan khusus lintas bisnis (Tidak ada paksaan & 100% netral):
+📲 https://chat.whatsapp.com/FKLqD5fjYqz5AaOWFer26R?s=cl&p=a&ilr=1
 
-• Silahkan di cek linknya dan WA Floating nya 
-Dan Promosikan 
-karena kalo bisnis itu harus ada promosi nya 
-kalau gak ya *Permisi*🤭
-
-• Kalau ada team lain pingin punya Link kayak kalian 
-tolong berikan link ini 
-*https://3ireborn.github.io/8kolam-prospek/penawaran-npa.html*
-
-• Dan silahkan join di group WA 
-[NANTI MASUKKAN LINK GRUP WA LINTAS BISNIS DI SINI]
-Tidak ada Paksaan dan ini lintas Jaringan
-
-Salam penuh cinta 💞 dari NPA Smart System 
+Salam sukses berkelimpahan,
 _PakD Sugiarto Kurniawan_`;
 
             document.getElementById('outputScript').value = scriptTemplate;
@@ -142,7 +121,7 @@ _PakD Sugiarto Kurniawan_`;
             }
 
             textarea.select();
-            textarea.setSelectionRange(0, 99999); // Untuk HP
+            textarea.setSelectionRange(0, 99999); 
             navigator.clipboard.writeText(textarea.value).then(() => {
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '<span>✅</span> BERHASIL DICOPY!';
