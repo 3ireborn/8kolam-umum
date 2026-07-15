@@ -40,9 +40,14 @@
             <label class="block text-sm font-bold text-emerald-400 mb-2">Hasil Script Serah Terima:</label>
             <textarea id="outputScript" class="w-full h-96 bg-slate-900 border border-slate-600 rounded-lg p-4 text-slate-300 text-sm whitespace-pre text-left focus:outline-none focus:border-emerald-500 font-mono" readonly></textarea>
             
-            <button onclick="copyToClipboard()" id="btnCopy" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 rounded-xl shadow-lg transition uppercase tracking-widest text-sm font-m flex justify-center items-center gap-2">
-                <span>📋</span> COPY SCRIPT KE WHATSAPP
-            </button>
+            <div class="flex flex-col md:flex-row gap-3 mt-4">
+                <button onclick="copyToClipboard()" id="btnCopy" class="flex-1 bg-slate-600 hover:bg-slate-500 text-white font-black py-3 rounded-xl shadow-lg transition uppercase tracking-widest text-sm font-m flex justify-center items-center gap-2">
+                    <span>📋</span> COPY SCRIPT
+                </button>
+                <button onclick="sendToWA()" id="btnWA" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 rounded-xl shadow-lg transition uppercase tracking-widest text-sm font-m flex justify-center items-center gap-2">
+                    <span>📲</span> KIRIM KE WA MITRA
+                </button>
+            </div>
         </div>
     </div>
 
@@ -125,15 +130,33 @@ _PakD Sugiarto Kurniawan_`;
             navigator.clipboard.writeText(textarea.value).then(() => {
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '<span>✅</span> BERHASIL DICOPY!';
-                btn.classList.replace('bg-emerald-600', 'bg-blue-600');
-                btn.classList.replace('hover:bg-emerald-500', 'hover:bg-blue-500');
+                btn.classList.replace('bg-slate-600', 'bg-blue-600');
+                btn.classList.replace('hover:bg-slate-500', 'hover:bg-blue-500');
                 
                 setTimeout(() => {
                     btn.innerHTML = originalText;
-                    btn.classList.replace('bg-blue-600', 'bg-emerald-600');
-                    btn.classList.replace('hover:bg-blue-500', 'hover:bg-emerald-500');
+                    btn.classList.replace('bg-blue-600', 'bg-slate-600');
+                    btn.classList.replace('hover:bg-blue-500', 'hover:bg-slate-500');
                 }, 2000);
             });
+        }
+
+        function sendToWA() {
+            const textarea = document.getElementById('outputScript');
+            let wa = document.getElementById('inputWA').value;
+            
+            if(!textarea.value || !wa) {
+                alert("Generate script dan pastikan nomor WA terisi dulu, Ndan!");
+                return;
+            }
+
+            wa = wa.replace(/\D/g,'');
+            if(wa.startsWith('0')) {
+                wa = '62' + wa.substring(1);
+            }
+
+            const textUrl = encodeURIComponent(textarea.value);
+            window.open(`https://wa.me/${wa}?text=${textUrl}`, '_blank');
         }
     </script>
 </body>
