@@ -10,10 +10,12 @@
         body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
         .font-m { font-family: 'Montserrat', sans-serif; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); border-color: #10b981; }
+        .card-hover-blue:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4); border-color: #3b82f6; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center pb-20">
 
+    <!-- Header -->
     <div class="w-full bg-slate-900 border-b border-slate-800 p-6 pt-12 pb-16 text-center shadow-xl relative overflow-hidden">
         <div class="absolute top-[-50px] left-[-50px] w-40 h-40 bg-emerald-500 rounded-full blur-[90px] opacity-20"></div>
         <div class="max-w-3xl mx-auto relative z-10 space-y-4">
@@ -24,12 +26,19 @@
                 Gudang Senjata <span class="text-emerald-400">Digital</span>
             </h1>
             <p class="text-sm md:text-base text-slate-300 font-light">
-                Kumpulan alat bantu eksklusif untuk riset prospek, optimasi promosi, dan duplikasi tim jaringan Anda.
+                Kumpulan alat bantu eksklusif untuk riset prospek, optimasi promosi, dan sistem follow-up tertarget untuk jaringan Anda.
             </p>
         </div>
     </div>
 
+    <!-- SEKSI 1: 6 TOOLS AI UTAMA -->
     <div class="max-w-4xl w-full p-5 mt-6 relative z-20">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="h-px bg-slate-700 flex-1"></div>
+            <h2 class="text-xl font-black text-emerald-500 font-m uppercase tracking-wider">🔧 ALAT TEMPUR UTAMA</h2>
+            <div class="h-px bg-slate-700 flex-1"></div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             
             <a href="https://3ireborn.github.io/npa-tools/radar-prospek.html" target="_blank" class="block bg-slate-800 p-6 rounded-2xl border border-slate-700 transition duration-300 card-hover">
@@ -71,12 +80,71 @@
         </div>
     </div>
 
-    <div class="max-w-4xl w-full p-5 mt-4 text-center">
+    <!-- SEKSI 2: 8 MESIN FOLLOW UP -->
+    <div class="max-w-4xl w-full p-5 mt-8 relative z-20">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="h-px bg-slate-700 flex-1"></div>
+            <h2 class="text-xl font-black text-blue-500 font-m uppercase tracking-wider">💬 SISTEM FOLLOW-UP TERTARGET</h2>
+            <div class="h-px bg-slate-700 flex-1"></div>
+        </div>
+        
+        <p class="text-center text-sm text-slate-400 mb-8 max-w-2xl mx-auto">
+            Gunakan script follow-up di bawah ini untuk mengunci prospek yang sudah masuk ke WhatsApp Anda sesuai dengan latar belakang profesinya.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            
+            <a href="https://3ireborn.github.io/8kolam-prospek/karyawan-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">👔</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Karyawan</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/emak-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">👩‍🍳</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Emak-Emak</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/tkw-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">✈️</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Pahlawan Devisa</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/mahasiswa-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">🎓</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Mahasiswa</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/pengusaha-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">💼</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Pengusaha</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/pns-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">🏢</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">ASN / PNS</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/sekolah-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">🎒</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Dana Sekolah</h2>
+            </a>
+
+            <a href="https://3ireborn.github.io/8kolam-prospek/umum-followup.html" target="_blank" class="block bg-slate-800/80 p-4 rounded-xl border border-slate-700 transition duration-300 card-hover-blue text-center">
+                <div class="text-3xl mb-2">🌐</div>
+                <h2 class="text-sm font-bold text-blue-400 font-m uppercase">Peluang Umum</h2>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Tombol Navigasi -->
+    <div class="max-w-4xl w-full p-5 mt-6 text-center">
          <a href="index.html" class="inline-block bg-slate-800 text-slate-300 hover:text-white font-bold px-6 py-3 rounded-xl text-sm border border-slate-700 transition">
             &larr; KEMBALI KE DASHBOARD 8 KOLAM
         </a>
     </div>
 
+    <!-- Footer -->
     <footer class="w-full text-center mt-12 mb-6">
         <p class="text-slate-500 text-xs font-light">
             &copy; 2026 NPA Smart System.<br>
