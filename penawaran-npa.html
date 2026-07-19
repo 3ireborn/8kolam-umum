@@ -3,140 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penawaran VVIP - NPA Smart System</title>
+    <title>Penawaran Terbatas - NPA Smart System VVIP</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
-        .font-m { font-family: 'Montserrat', sans-serif; }
-        .glow-emerald { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+        body { font-family: 'Poppins', sans-serif; background-color: #050b14; color: #f8fafc; overflow-x: hidden; scroll-behavior: smooth; }
+        .gold-text { background: linear-gradient(135deg, #fde047 0%, #d97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-bg { background: linear-gradient(135deg, #fde047 0%, #d97706 100%); }
+        .glow-gold { box-shadow: 0 0 30px rgba(217, 119, 6, 0.4); }
+        .glow-red { box-shadow: 0 0 25px rgba(239, 68, 68, 0.5); }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center pb-20">
+<body class="relative bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] p-4 md:p-8">
+    
+    <!-- Background Glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-amber-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
-    <!-- Hero Section -->
-    <div class="w-full bg-slate-900 border-b border-slate-800 p-6 pt-12 pb-16 text-center shadow-xl relative overflow-hidden">
-        <div class="absolute top-[-50px] left-[-50px] w-40 h-40 bg-emerald-500 rounded-full blur-[90px] opacity-20"></div>
-        <div class="absolute bottom-[-50px] right-[-50px] w-40 h-40 bg-blue-500 rounded-full blur-[90px] opacity-20"></div>
+    <div class="max-w-3xl mx-auto relative z-10">
         
-        <div class="max-w-3xl mx-auto relative z-10 space-y-5">
-            <div class="inline-block bg-red-600 text-white font-black px-4 py-1 rounded-full text-xs uppercase tracking-widest mb-2 animate-pulse">
-                Peringatan: Khusus Pebisnis Jaringan & Marketer
-            </div>
-            <h1 class="text-3xl md:text-5xl font-black text-white font-m uppercase tracking-wider leading-tight">
-                Tinggalkan Cara Lama! <br>
-                <span class="text-emerald-400">Biar Sistem AI Yang Bekerja</span><br>
-                Mencari Prospek 24 Jam
+        <!-- HEADER FOMO 🔥 -->
+        <div class="bg-red-600 border-2 border-red-400 rounded-3xl p-4 md:p-6 text-center mb-8 glow-red animate-pulse">
+            <h1 class="text-xl md:text-2xl font-black text-white tracking-widest uppercase">
+                ⚠️ PERINGATAN: KESEMPATAN EMAS TERBATAS! ⚠️
             </h1>
-            <p class="text-sm md:text-base text-slate-300 font-light max-w-2xl mx-auto">
-                Capek ditolak? Habis waktu sebar brosur? Kini saatnya Anda memiliki "Robot Asisten" yang siap memfilter prospek, presentasi otomatis, dan memberikan edukasi tanpa Anda harus capek bicara.
+            <p class="text-red-100 text-sm mt-1 font-semibold">Halaman ini bisa ditutup kapan saja saat kuota promo habis.</p>
+        </div>
+
+        <!-- SHOWCASE 9 KOLAM -->
+        <div class="bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-3xl p-6 md:p-8 mb-8 shadow-2xl">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-black gold-text mb-3">Sistem 9 Kolam Prospek</h2>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Senjata rahasia yang akan membantu Anda <strong class="text-emerald-400">CLOSING SECARA ONLINE!</strong> 
+                    Setiap kolam di-desain khusus untuk menembus pertahanan psikologis target market Anda.
+                </p>
+                <p class="text-amber-400 text-xs mt-2 italic">*Silakan klik Kolam Karyawan untuk melihat Demo LIVE!</p>
+            </div>
+
+            <!-- GRID 9 KOLAM -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                
+                <!-- UNLOCKED: KARYAWAN -->
+                <a href="karyawan.html" target="_blank" class="block bg-slate-800 p-4 rounded-xl border border-emerald-500 hover:bg-slate-700 transition-all relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider shadow-lg">UNLOCKED 🔓</div>
+                    <i class="fa-solid fa-briefcase text-2xl text-emerald-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-white font-bold text-sm">Kolam Karyawan</h4>
+                    <p class="text-[10px] text-emerald-400 mt-1 font-semibold">Klik untuk Demo Live 👉</p>
+                </a>
+
+                <!-- LOCKED: 8 KOLAM LAINNYA -->
+                <!-- Arahkan link ke bagian checkout (id="checkout") -->
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-shield-halved text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Polri & TNI</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-person-breastfeeding text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Emak-Emak</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-plane-departure text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Pejuang Devisa (TKW)</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-store text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Pedagang</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-building-user text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">PNS</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-rocket text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Pengusaha</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-graduation-cap text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Mahasiswa</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+
+                <a href="#checkout" class="block bg-slate-950 p-4 rounded-xl border border-red-500/30 hover:border-red-500 transition-all relative overflow-hidden group cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-red-900/80 text-red-300 text-[10px] px-2 py-1 rounded-bl-lg font-black tracking-wider">LOCKED 🔒</div>
+                    <i class="fa-solid fa-school text-2xl text-slate-600 mb-2 group-hover:text-red-500 transition-colors"></i>
+                    <h4 class="text-slate-400 font-bold text-sm group-hover:text-white transition-colors">Biaya Sekolah</h4>
+                    <p class="text-[10px] text-red-500/50 mt-1">Akses Khusus VVIP</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- NEW CORE OFFER: CUSTOM LP & BUILDER -->
+        <div class="bg-gradient-to-br from-amber-900 to-slate-900 border-2 border-amber-500 rounded-3xl p-6 md:p-10 mb-12 shadow-[0_0_40px_rgba(217,119,6,0.2)] relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-9xl text-amber-500/10"><i class="fa-solid fa-gem"></i></div>
+            
+            <h2 class="text-2xl md:text-3xl font-black text-white mb-2 leading-tight">
+                TUNGGU DULU!<br>
+                <span class="text-amber-400">Ini Bukan Cuma Soal 9 Kolam...</span>
+            </h2>
+            
+            <div class="w-20 h-1 gold-bg rounded-full mb-6"></div>
+            
+            <p class="text-slate-200 text-lg md:text-xl font-medium leading-relaxed mb-6">
+                Dapatkan <strong class="text-white gold-text text-xl">CUSTOM LP BISNIS ANDA</strong> dengan tombol WhatsApp yang mengarah langsung ke WA Pribadi Anda!
+            </p>
+            
+            <div class="bg-black/40 border border-amber-500/30 p-5 rounded-2xl">
+                <p class="text-emerald-400 font-black text-lg mb-2"><i class="fa-solid fa-bolt mr-2"></i> PLUS KEKUATAN DUPLIKASI!</p>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Anda juga akan mendapatkan <strong>MESIN BUILDER LP</strong>-nya! Cukup bagikan link mesin tersebut, dan mitra-mitra Anda bisa mencetak Link Referral mereka sendiri secara otomatis. <br>
+                    <span class="block mt-2 font-bold text-amber-500">Membangun jaringan dan duplikasi tim jadi semudah membalikkan telapak tangan!</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- PRICING & CHECKOUT (ID="checkout") -->
+        <div id="checkout" class="bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 text-center shadow-2xl relative scroll-mt-8">
+            <h3 class="text-2xl font-black text-white mb-2 uppercase tracking-wide">Amankan Akses VVIP Anda!</h3>
+            <p class="text-slate-400 text-sm mb-8">Investasi leher ke atas untuk mendobrak kebuntuan bisnis jaringan Anda.</p>
+            
+            <div class="inline-block bg-red-950/50 border border-red-500/50 rounded-2xl p-4 px-8 mb-4 rotate-[-2deg]">
+                <p class="text-slate-400 font-bold mb-1">HARGA NORMAL:</p>
+                <p class="text-3xl md:text-4xl font-black text-red-500 line-through decoration-white decoration-4">Rp 499.000</p>
+            </div>
+            
+            <div class="mb-8">
+                <div class="inline-block bg-emerald-500 text-white font-black px-4 py-1 rounded-full text-sm mb-3 shadow-[0_0_15px_rgba(16,185,129,0.5)] animate-bounce">
+                    🎉 DISKON GILA 68% HARI INI!
+                </div>
+                <p class="text-slate-400 font-medium mb-1 uppercase tracking-widest text-xs">Cukup Bayar:</p>
+                <p class="text-5xl md:text-7xl font-black gold-text drop-shadow-2xl">Rp 159.000</p>
+                <p class="text-xs text-slate-500 mt-2">(Sekali Bayar. Akses 9 Kolam + Custom LP + Mesin Builder)</p>
+            </div>
+
+            <!-- TOMBOL WA AFFILIATE -->
+            <a id="btnWA" href="#" class="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-5 rounded-2xl font-black text-xl md:text-2xl shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:scale-[1.02] transition-transform uppercase tracking-tight">
+                <i class="fa-brands fa-whatsapp mr-2"></i> AMANKAN PROMO 159RB SEKARANG
+            </a>
+            
+            <p class="mt-4 text-[11px] text-slate-500 uppercase font-bold tracking-widest flex items-center justify-center gap-2">
+                <i class="fa-solid fa-lock text-slate-400"></i> Transaksi Aman Langsung ke Admin Pusat
             </p>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="max-w-3xl w-full p-5 mt-6 relative z-20 space-y-8">
-        
-        <!-- Masalah -->
-        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center">
-            <h2 class="text-xl font-bold text-amber-400 font-m uppercase mb-4">Apakah Ini Yang Anda Alami?</h2>
-            <ul class="text-slate-300 text-sm space-y-3 text-left max-w-lg mx-auto">
-                <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Prospekting manual yang melelahkan dan sering di-PHP.</li>
-                <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Bingung cara bikin kalimat promosi yang menarik di Facebook.</li>
-                <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Tim/Downline muntaber (mundur tanpa berita) karena tidak ada alat duplikasi.</li>
-            </ul>
-        </div>
-
-        <!-- Solusi -->
-        <div class="text-center space-y-3">
-            <h2 class="text-2xl font-black text-emerald-400 font-m uppercase">NPA Smart System VVIP Solusinya!</h2>
-            <p class="text-sm text-slate-400">Sekali setting, sistem akan menjadi mesin pencetak prospek Anda.</p>
-        </div>
-
-        <!-- Rincian Fitur -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                <div class="text-3xl mb-2">🕸️</div>
-                <h3 class="font-bold text-white font-m mb-1">9 Kolam Prospek (Web)</h3>
-                <p class="text-xs text-slate-400">Landing page tertarget untuk berbagai profesi (Emak-emak, TKW, PNS, Mahasiswa, dll). Siap sebar!</p>
-            </div>
-            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                <div class="text-3xl mb-2">🤖</div>
-                <h3 class="font-bold text-white font-m mb-1">7 Tools AI Digital</h3>
-                <p class="text-xs text-slate-400">Radar WA, Generator Konten FB Viral, sampai sistem manajemen rutinitas harian.</p>
-            </div>
-            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                <div class="text-3xl mb-2">💬</div>
-                <h3 class="font-bold text-white font-m mb-1">Script Follow Up Cerdas</h3>
-                <p class="text-xs text-slate-400">Naskah closing yang sudah disesuaikan dengan latar belakang prospek. Anti-ghosting!</p>
-            </div>
-            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                <div class="text-3xl mb-2">🤝</div>
-                <h3 class="font-bold text-white font-m mb-1">Mentoring Eksklusif</h3>
-                <p class="text-xs text-slate-400">Masuk ke grup pembinaan lintas bisnis untuk belajar digital marketing langsung dari suhunya.</p>
-            </div>
-        </div>
-
-        <!-- VALUE STACKING SECTION (HARGA) -->
-        <div class="bg-slate-900 p-8 rounded-2xl border-2 border-emerald-500/50 relative overflow-hidden mt-12">
-            <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest">Penawaran Gila!</div>
-            
-            <h3 class="text-2xl md:text-3xl font-black text-emerald-400 font-m text-center mb-6 uppercase">Kenapa Anda Wajib Punya Sistem Ini?</h3>
-            <p class="text-slate-300 text-center text-sm md:text-base mb-8">Coba bayangkan berapa banyak uang dan waktu yang harus Anda keluarkan jika membuat sistem secanggih ini sendiri dari nol:</p>
-            
-            <ul class="space-y-4 mb-8 text-sm md:text-base">
-                <li class="flex justify-between items-center border-b border-slate-700 pb-3">
-                    <span class="text-white font-medium">🎯 9 Kolam Prospek (Web Khusus)</span>
-                    <span class="text-red-400 line-through">Rp 3.500.000</span>
-                </li>
-                <li class="flex justify-between items-center border-b border-slate-700 pb-3">
-                    <span class="text-white font-medium">🎁 7 Tools AI & Mesin Follow-Up</span>
-                    <span class="text-red-400 line-through">Rp 1.750.000</span>
-                </li>
-                <li class="flex justify-between items-center border-b border-slate-700 pb-3">
-                    <span class="text-white font-medium">🤝 Bimbingan Grup WA Eksklusif</span>
-                    <span class="text-red-400 line-through">Rp 500.000</span>
-                </li>
-                <li class="flex justify-between items-center pt-2 font-black text-lg md:text-xl">
-                    <span class="text-slate-400">Total Nilai Sebenarnya</span>
-                    <span class="text-red-500 line-through">Rp 5.750.000</span>
-                </li>
-            </ul>
-
-            <div class="text-center bg-emerald-950 p-6 rounded-xl border border-emerald-500/30 mb-8">
-                <p class="text-emerald-300 text-sm font-bold uppercase tracking-widest mb-2">Spesial Promo Hari Ini Saja</p>
-                <p class="text-5xl md:text-6xl font-black text-white font-m mb-2">Rp 99.000</p>
-                <p class="text-xs text-slate-400">(Sekali bayar, tanpa biaya bulanan, bebas pakai selamanya)</p>
-            </div>
-
-            <a id="btnWA" href="https://wa.me/6285218453131?text=Halo%20Pakde,%20saya%20sudah%20baca%20penawaran%20NPA%20Smart%20System.%20Saya%20mau%20amankan%20promo%2099rb-nya%20sekarang!" class="block w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-5 rounded-xl glow-emerald transition uppercase tracking-widest text-center text-sm md:text-base font-m">
-                🚀 AMANKAN PROMO 99.000 SEKARANG
-            </a>
-            <p class="text-center text-xs text-slate-500 mt-4">Klik tombol di atas untuk menghubungi Admin via WhatsApp.</p>
-        </div>
+        <!-- Footer -->
+        <footer class="w-full text-center mt-16 mb-8">
+            <p class="text-slate-500 text-xs font-light">
+                &copy; 2026 NPA Smart System.<br>
+                <span class="font-medium font-bold">Developed by Sugiarto Kurniawan</span>
+            </p>
+        </footer>
 
     </div>
 
-    <!-- Footer -->
-    <footer class="w-full text-center mt-12 mb-6">
-        <p class="text-slate-500 text-xs font-light">
-            &copy; 2026 NPA Smart System.<br>
-            <span class="font-m font-bold">Developed by Sugiarto Kurniawan</span>
-        </p>
-    </footer>
-    
+    <!-- SCRIPT AFFILIATE NINJA (Update Harga 159.000 + Custom LP) -->
     <script>
         window.onload = function() {
             // Nomor WA Ndan (Admin Pusat)
-            // PASTIKAN NOMOR INI BENAR (Gunakan format 62 tanpa + dan tanpa 0 di depan)
             const waAdmin = "6285218453131"; 
             
             // Cek memori HP prospek: Apakah ada titipan nama affiliator?
             const affNama = localStorage.getItem('npa_aff_nama');
             const affWa = localStorage.getItem('npa_aff_wa');
             
-            // Siapkan Pesan WA Dasar
-            let pesanWA = "Halo Pakde Sugiarto,%0ASaya siap Action dan mau AMANKAN PROMO 99.000 NPA Smart System VVIP!";
+            // Siapkan Pesan WA Dasar (SUDAH DIUPDATE HARGANYA)
+            let pesanWA = "Halo Pakde Sugiarto,%0ASaya siap Action dan mau AMANKAN PROMO 159.000 NPA Smart System VVIP!%0A(Sudah termasuk 9 Kolam Prospek + Custom LP + Builder)";
             
             // Jika ada data affiliator, tambahkan ke dalam pesan
             if (affNama && affWa) {
@@ -146,15 +196,14 @@
             // Gabungkan Nomor Admin + Pesan
             const linkWAFinal = `https://wa.me/${waAdmin}?text=${pesanWA}`;
             
-            // CARI TOMBOL BELI (Sesuai ID yang Ndan buat di screenshot: btnWA)
+            // CARI TOMBOL BELI
             const tombol = document.getElementById('btnWA');
             
-            // Jika tombolnya ketemu, ganti link aslinya dengan link yang sudah ditambahi nama affiliator
+            // Eksekusi pergantian link
             if(tombol) {
                 tombol.href = linkWAFinal;
             }
         };
     </script>
-    
 </body>
 </html>
