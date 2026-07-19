@@ -124,6 +124,37 @@
             <span class="font-m font-bold">Developed by Sugiarto Kurniawan</span>
         </p>
     </footer>
+    
+    <script>
+        window.onload = function() {
+            // Nomor WA Ndan (Admin Pusat)
+            // PASTIKAN NOMOR INI BENAR (Gunakan format 62 tanpa + dan tanpa 0 di depan)
+            const waAdmin = "6285218453131"; 
+            
+            // Cek memori HP prospek: Apakah ada titipan nama affiliator?
+            const affNama = localStorage.getItem('npa_aff_nama');
+            const affWa = localStorage.getItem('npa_aff_wa');
+            
+            // Siapkan Pesan WA Dasar
+            let pesanWA = "Halo Pakde Sugiarto,%0ASaya siap Action dan mau AMANKAN PROMO 99.000 NPA Smart System VVIP!";
+            
+            // Jika ada data affiliator, tambahkan ke dalam pesan
+            if (affNama && affWa) {
+                pesanWA += `%0A%0A---%0ASaya direkomendasikan oleh:%0ANama: ${affNama}%0AWA: ${affWa}%0A---%0A%0ATolong proses aktivasi saya ya Ndan!`;
+            }
 
+            // Gabungkan Nomor Admin + Pesan
+            const linkWAFinal = `https://wa.me/${waAdmin}?text=${pesanWA}`;
+            
+            // CARI TOMBOL BELI (Sesuai ID yang Ndan buat di screenshot: btnWA)
+            const tombol = document.getElementById('btnWA');
+            
+            // Jika tombolnya ketemu, ganti link aslinya dengan link yang sudah ditambahi nama affiliator
+            if(tombol) {
+                tombol.href = linkWAFinal;
+            }
+        };
+    </script>
+    
 </body>
 </html>
